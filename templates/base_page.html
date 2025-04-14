@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block pagetitle %}{% endblock %}</title>
+    <!-- load static -->
+    {% load static %}
+    <!-- CSS -->
+	
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+<main>
+    <div class="container">
+        <header>
+			<div class ="container">
+				<div class="row">
+					<div class="col-5 offset-md-0 mb-3">
+						<a href="/" class="d-flex mb-3 mb-md-0 me-md-auto btn btn-outline-secondary justify-content-center">
+							<p class="fs-2">Главная</p>
+						</a>
+					</div>
+					<div class="col-4 offset-md-3 mb-3">
+						<button onclick="toggleTheme()" class="d-flex mb-3 mb-md-0 me-md-auto btn btn-outline-secondary justify-content-center">
+							<p class="fs-2">Светлая/темная тема</p>
+						</button>
+						<script>
+							if (localStorage.getItem('theme') === 'dark') {
+								document.documentElement.setAttribute('data-bs-theme', 'dark');
+							} else {
+								document.documentElement.setAttribute('data-bs-theme', 'light');
+							}
+							function toggleTheme() {
+								if (document.documentElement.getAttribute('data-bs-theme') === 'dark'){
+									document.documentElement.setAttribute('data-bs-theme', 'light');
+									localStorage.setItem('theme', 'light');
+								}else{
+									document.documentElement.setAttribute('data-bs-theme', 'dark');
+									localStorage.setItem('theme', 'dark');
+								}
+							}
+						</script>
+					</div>
+				</div>
+				<div class ="row">
+					<div class="col-6 mb-3">
+							<a href="/test" class="d-flex mb-3 mb-md-0 me-md-auto text-decoration-none btn btn-outline-secondary justify-content-center">
+								<p class=" fs-2">Пройти тест</p>
+							</a>
+						</div>
+					<div class="col-6 mb-3">
+						<a href="/tagged-list" class="d-flex mb-3 mb-md-0 me-md-auto text-decoration-none btn btn-outline-secondary justify-content-center">
+							<p class="fs-2">Просмотр по тегам</p>
+						</a>
+					</div>
+				</div>
+			</div>
+        </header>
+        <div class="p-3 mb-4 bg-secondary rounded-3" id="title-box">
+            <div class="container-fluid py-5 bg-body bg-gradient rounded-3">
+                <h1 class="display-1 fw-bold text-center">{% block page-title %}{% endblock %}</h1>
+				<p class="fs-4 text-center">{% block page-lead %}{% endblock %}</p>
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+        <footer class="footer pt-3 mt-4 text-muted border-top">© 2025</footer>
+    </div>
+	
+</main>
+</body>
+</html>

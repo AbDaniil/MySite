@@ -1,0 +1,35 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Добавить новое правило
+{% endblock %}
+
+{% block page-lead %}
+Введите новое правило и добавьте теги при необходимости. </br>
+Оно будет добавлено в существующую базу.
+{% endblock %}
+
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="term-form">
+    <form method="post">
+        <div class="row px-5 py-2">
+            <h1>Ваше правило</h1>
+        </div>
+        <div class="row px-5 py-2">
+			<div class="col-md-9">
+                <label for="new_rule">Текст правила</label>
+                <textarea type="text" class="form-control input-lg" name="new_rule" id="new_rule" aria-describedby="rule_note" rows="7"></textarea>
+            </div>
+            <div class="col-md-3">
+                <label for="new_tags">Теги</label>
+                <input type="text" class="form-control input-lg" name="new_tags" id="new_tags">
+				<div id="tags_note" class="form-text">Перечислите теги через точку с запятой, без пробелов регистр не учитывается</div>
+            </div>
+        </div>
+        <div class="row px-5 py-2">
+            <button type="submit" class="btn btn-outline-secondary" formaction="/send-rule">Добавить</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

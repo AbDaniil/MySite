@@ -1,0 +1,56 @@
+{
+    "data": [
+        {
+            "word": "Apple",
+            "translation": "Яблоко",
+            "image": "https://steamuserimages-a.akamaihd.net/ugc/2541800915823277767/E12BE5707C66A041CB423E6A8A02F36132E0C8E7/?imw=512&amp;imh=511&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true",
+            "tags": [
+                "фрукт"
+            ]
+        },
+        {
+            "word": "Pineapple",
+            "translation": "Ананас",
+            "image": "https://main-cdn.sbermegamarket.ru/big1/hlr-system/140/741/735/682/416/22/100036986498b0.jpeg",
+            "tags": [
+                "фрукт"
+            ]
+        },
+        {
+            "word": "Mandarins",
+            "translation": "Мандарины",
+            "image": "https://main-cdn.sbermegamarket.ru/big2/hlr-system/117/744/772/212/121/920/100045549963b0.jpg",
+            "tags": [
+                "фрукт"
+            ]
+        },
+        {
+            "word": "Cucumber",
+            "translation": "Огурец",
+            "image": "https://media.baamboozle.com/uploads/images/695725/1649801565_5778704.png",
+            "tags": [
+                "овощ"
+            ]
+        },
+        {
+            "word": "Cabbage",
+            "translation": "Капуста",
+            "image": "https://main-cdn.sbermegamarket.ru/big1/hlr-system/198/813/298/372/911/57/100069832729b0.jpg",
+            "tags": [
+                "овощ"
+            ]
+        },
+        {
+            "word": "Carrot",
+            "translation": "Морковь",
+            "image": "https://cdn.vseinstrumenti.ru/img/cats/180265.jpg",
+            "tags": [
+                "овощ"
+            ]
+        }
+    ],
+    "tags": [
+        "фрукт",
+        "овощ"
+    ]
+}

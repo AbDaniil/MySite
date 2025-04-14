@@ -1,0 +1,32 @@
+{% extends "base_page.html" %}
+{% load static %}
+
+{% block page-title %}
+Поиск по тегам
+{% endblock %}
+
+{% block page-lead %}
+Здесь вы можете найти слова и правила с нужными тегами
+{% endblock %}
+
+{% block content %}
+
+<div class="row mb-5 border-bottom">
+	<form method="post">
+		<div class="col-2 mb-3">
+			<p class=" fs-2"> Выбрать тэг <p>
+		</div>
+		<div class="col-2 mb-3">
+			<select size="4" id="tag" id ="tag_for_search" name ="tag_for_search">
+				 <option value="">--Выберите тэг--</option>
+				{% for tag in tags %}
+					<option value= {{tag}} >{{ tag }}</option>
+				{% endfor %}
+			</select>
+		</div>
+		<div class="col-3 mb-3">
+			<button type="submit" class="btn btn-outline-secondary" formaction="/search-tag">Найти</button>
+		</div>
+	</form>
+</div>
+{% endblock %}

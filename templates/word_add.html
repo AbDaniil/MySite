@@ -1,0 +1,43 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Добавить новое слово
+{% endblock %}
+
+{% block page-lead %}
+Введите новое слово, его перевод и добавьте теги при необходимости. </br>
+Оно будет добавлено в существующую базу.
+{% endblock %}
+
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="term-form">
+    <form method="post">
+        <div class="row px-5 py-2">
+            <h1>Ваше слово</h1>
+        </div>
+        <div class="row px-5 py-2">
+			<div class="col-md-3">
+                <label for="new_word">Слово на английском</label>
+                <textarea type="text" class="form-control input-lg" name="new_word" id="new_word" aria-describedby="word_note" rows="1"></textarea>
+            </div>
+			<div class="col-md-3">
+                <label for="new_tr">Перевод</label>
+                <textarea type="text" class="form-control input-lg" name="new_tr" id="new_tr" aria-describedby="tr_note" rows="1"></textarea>
+            </div>
+			<div class="col-md-3">
+                <label for="new_img">Картинка</label>
+                <textarea type="text" class="form-control input-lg" name="new_img" id="new_img" aria-describedby="img_note" rows="1"></textarea>
+            </div>
+            <div class="col-md-3">
+                <label for="new_tags">Теги</label>
+                <input type="text" class="form-control input-lg" name="new_tags" id="new_tags">
+				<div id="tags_note" class="form-text">Перечислите теги через точку с запятой, без пробелов регистр не учитывается</div>
+            </div>
+        </div>
+        <div class="row px-5 py-2">
+            <button type="submit" class="btn btn-outline-secondary" formaction="/send-word">Добавить</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

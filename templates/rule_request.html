@@ -1,0 +1,26 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+{% if success %}
+Термин добавлен
+{% else %}
+Ошибка добавления
+{% endif %}
+{% endblock %}
+
+{% block page-lead %}{% endblock %}
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="term-form-result">
+    <h1 class="pb-2 border-bottom">Результат запроса</h1>
+    <p class=" fs-4">Уважаемый пользователь, 
+	{% if success %}
+		добавление правила прошло <span class="fw-bold"> успешно</span>!
+	{% else %}
+        к сожалению, попытка добавления правила завершилась <span class="fw-bold">ошибкой</span>.
+	{% endif %}
+	<span class="fw-bold"> {{ comment }}</span>.
+    </p>
+	<a href="/add-rule" class="fs-4"> Заполнить форму ещё раз</a>?
+</div>
+{% endblock %}
